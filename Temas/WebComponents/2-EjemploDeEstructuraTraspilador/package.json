@@ -1,0 +1,16 @@
+{
+  "name": "2-ejemplodeestructuratraspilador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@web/dev-server": "^0.1.30",
+    "@web/dev-server-esbuild": "^0.2.16"
+  }
+}
