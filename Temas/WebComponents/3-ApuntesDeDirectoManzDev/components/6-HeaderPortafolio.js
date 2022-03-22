@@ -73,7 +73,11 @@ class HeaderPortafolio extends HTMLElement{
         </div>
         `//Para agregar estilos podemos usar la etiqueta style y dentro de ella vamos a poner el css. Podemos tener un css global y un css por componente.
         //Con el shadow dom podemos agregar estilos a los componentes y que solo se queden en los mismos, sin dejar que css entre o salga de los mismos.
-        //ahroa si con el ShadowRoot, el css no se va a escapar. Tambien podemos traer estilos desde un archivo 
+        //ahroa si con el ShadowRoot, el css no se va a escapar. Tambien podemos traer estilos desde un archivo externo, esto hace una peticion externa y puede ser complicado con el rendimiento.
+        //Las variables CSS si traspasan el shadow dom.
+        //:host{} es una pseudo clase que se usa para agregar estilos a un componente como padre de todo lo que tiende dentro.
+        //:host(.classenombre){} es una pseudo clase que se usa para agregar si es que el componente tiene una clase.
+        //:host-context(.classenombre){} busca si en los padres del componente tiene una clase en espesifica.
     }
 }
 
