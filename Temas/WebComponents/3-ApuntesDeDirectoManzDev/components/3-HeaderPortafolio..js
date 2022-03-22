@@ -16,13 +16,28 @@ class HeaderPortafolio extends HTMLElement{
         // <img src="https://pbs.twimg.com/profile_images/1469812812511948802/42JLNnH1_400x400.png" alt="">
         // <h1>Igancio Basilio / @ignadev</h1>
         // `
+        this.nombre = this.getAttribute("nombre") ?? "Nacho"//Asi podemos tomar los atributos que se han puesto en el componente.
         this.render()//Render es una función que se va a ejecutar en el momento que se cargue el componente en el DOM para pintar el componente. Otros framkworks no necesitan de este metodo.
     }
 
-    render(){
+    render(){//Vamos a usar la api del DOM de html para pintar el componente. Las dos son buenas maneras de hacerlo.
+        const h1 = document.createElement("h1")
+        h1.textContent = this.nombre
+
+        const img = document.createElement("img")
+        img.src = "https://pbs.twimg.com/profile_images/1469812812511948802/42JLNnH1_400x400.png"
+
+        const header = document.createElement("header")
+        header.appendChild(img)
+        header.appendChild(h1)
+
+        this.appendChild(header)
+    }
+
+    HTMLrender(){
         this.innerHTML = `<div class="header">
         <img src="https://pbs.twimg.com/profile_images/1469812812511948802/42JLNnH1_400x400.png" alt="">
-        <h1>Igancio Basilio / @ignadev</h1>
+        <h1>${this.nombre}/ @ignadev</h1>
         `
     }
 }
