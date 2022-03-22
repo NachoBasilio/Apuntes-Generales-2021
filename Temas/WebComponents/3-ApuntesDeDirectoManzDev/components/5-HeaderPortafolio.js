@@ -20,6 +20,27 @@ class HeaderPortafolio extends HTMLElement{
         this.render()//Render es una función que se va a ejecutar en el momento que se cargue el componente en el DOM para pintar el componente. Otros framkworks no necesitan de este metodo.
     }
 
+
+    /*
+    Hay distintos metodos para manejar atributos:
+    .hasAttribute(name)
+    .getAttribute(name)
+    .setAttribute(name, value)
+    .removeAttribute(name)
+    .toggleAttribute(name)
+    */ 
+
+    /* 
+    Para observar y reaccionar a cambios hay otros metodos: 
+    - observedAttributes(){
+            return ["nombre"]
+        }
+    - attributeChangedCallback(name, oldValue, newValue){
+    */
+
+        
+    
+
     // render(){//Vamos a usar la api del DOM de html para pintar el componente. Las dos son buenas maneras de hacerlo.
     //     const h1 = document.createElement("h1")
     //     h1.textContent = this.nombre
@@ -36,10 +57,10 @@ class HeaderPortafolio extends HTMLElement{
 
     disconnectedCallback(){//Este metodo es un especie de destructor para webcomponent, es decir, cuando se elimine el componente del DOM, este metodo se va a ejecutar.
         console.log("Se ha eliminado el componente")
-
     }
-    
-    
+
+
+
 
     render(){
         this.innerHTML = `<div class="header">
