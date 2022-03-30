@@ -42,6 +42,7 @@ class PersonajeDiver extends HTMLElement {
   <style>${PersonajeDiver.styles}</style>
   <div>
     <img src="${this.fotoPerfil}" alt="">
+    <slot></slot>
     <h2>Personaje Diver</h2>
   </div>`;
   }
