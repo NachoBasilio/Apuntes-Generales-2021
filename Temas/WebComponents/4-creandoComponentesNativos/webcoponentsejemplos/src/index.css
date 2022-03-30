@@ -1,0 +1,8 @@
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+}

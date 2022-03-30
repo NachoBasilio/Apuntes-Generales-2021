@@ -15,13 +15,27 @@ class PersonajeDiver extends HTMLElement {
     img {
       width: 100px;
     }
+
+    :host(.color){
+      background-color: red;
+    }
  `;
   }
 
   connectedCallback() {
     this.fotoPerfil = this.getAttribute("fotoPerfil") ?? DEFAULT_FOTO_PERFIL;
     this.render();
+    this.shadowRoot.querySelector("div").addEventListener("click", () => this.emitEvent());
   }
+
+  emitEvent() {
+    const event = new CustomEvent("MainInfo", { detail: this.fotoPerfil, composed: true, bubbles: true });
+    this.dispatchEvent(event);
+  }
+
+  setColor() {
+    this.classList.toggle("color");
+  };
 
   render() {
     this.shadowRoot.innerHTML = `
