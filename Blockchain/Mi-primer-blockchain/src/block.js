@@ -1,4 +1,5 @@
 const SHA256 = require('crypto-js/sha256');
+const hex2ascii = require('hex2ascii');
 
 class Block {//Vamos a crear una clase para nuestro bloque.
     constructor(data){
@@ -20,8 +21,34 @@ class Block {//Vamos a crear una clase para nuestro bloque.
                 reject(false);
             }
             resolve(true)
+        })//Esta promesa va a evaluar si el hash es el correcto, asi comprobando que la informacion del bloque se ha guardado correctamente.
+    }
+
+    //Con este metodo vamos a decodificar el cuerpo del body, ya que lo tenemos en sexadecimal.
+    getBlockData(){
+        const self = this;
+        return new Promise((resolve, reject) => {
+            let encodedData = self.body;
+            let decodedData = hex2ascii(encodedData);//con ayuda de esta libreria vamos a decodificar el cuerpo del bloque.
+            let dataObject = JSON.parse(decodedData);
+            if(dataObject === "Genesis Block"){//El bloque genesis es el primer bloque que se crea, por lo que no tiene un bloque anterior y su altura es 0.
+                reject(new Error("Genesis Block"));
+            }
+            resolve(dataObject);
 
         })
+    }
+
+    //Este metodo va a ser usado para mostrar en consola el bloque.
+    toString(){
+        const {hash, height, body, time, previousBlockHash} = this;
+        return `Block - 
+        Hash: ${hash}
+        Height: ${height}
+        Body: ${body}
+        Time: ${time}
+        Previous Block Hash: ${previousBlockHash}
+        -----------------------------------------------------`;
     }
 }
 
