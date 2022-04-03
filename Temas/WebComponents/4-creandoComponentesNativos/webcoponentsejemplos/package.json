@@ -27,5 +27,8 @@
     "vite": "^2.8.0"
   },
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "uniqid": "^5.4.0"
+  }
 }
