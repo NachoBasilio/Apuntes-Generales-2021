@@ -15,7 +15,7 @@ class Block {//Vamos a crear una clase para nuestro bloque.
         const self = this;
         return new Promise((resolve, reject) => {
             let currentHash = self.hash;
-            self.hash = SHA256(JSON.stringify(JSON.stringify({...self,hash:null})).toString());
+            self.hash = SHA256(JSON.stringify({ ...self, hash: null })).toString();
 
             if(currentHash !== self.hash){
                 reject(false);
@@ -52,4 +52,4 @@ class Block {//Vamos a crear una clase para nuestro bloque.
     }
 }
 
-module.export= Block;
+module.exports= Block;
