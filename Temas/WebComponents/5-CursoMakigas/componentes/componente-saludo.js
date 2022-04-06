@@ -9,6 +9,9 @@ class SaludoFachero extends HTMLElement {
    :host {;
 
    }
+   h1 {
+    font-size: 30px;
+   }
  `;
   }
 
@@ -21,6 +24,7 @@ class SaludoFachero extends HTMLElement {
   <style>${SaludoFachero.styles}</style>
   <div>
     <h1>Hola ${this.getAttribute("nombre")}</h1>
+    <p>${this.getAttribute("mensaje")}</p>
   </div>`;
  }
 }
