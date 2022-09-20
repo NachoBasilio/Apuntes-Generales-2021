@@ -1,0 +1,20 @@
+{
+  "name": "notasjs",
+  "version": "1.0.0",
+  "description": "Este repositiorio es el lugar a donde van a parar mis notas al respecto de temas referidos a la programación web.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NachoBasilio/notas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NachoBasilio/notas/issues"
+  },
+  "homepage": "https://github.com/NachoBasilio/notas#readme",
+  "keywords": []
+}
