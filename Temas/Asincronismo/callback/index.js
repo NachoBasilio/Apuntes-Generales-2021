@@ -10,8 +10,9 @@ function calc(num1, num2, callback){
 
 console.log(calc(1,2,suma))
 
-function saludo(){
+function saludo(callback){
     console.log("Hola")
+    setTimeout(callback, 111);
 }
 
-setTimeout(saludo, 5000)
+saludo(function(){console.log("saludo")});

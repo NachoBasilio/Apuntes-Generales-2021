@@ -16,5 +16,8 @@
     "url": "https://github.com/NachoBasilio/notas/issues"
   },
   "homepage": "https://github.com/NachoBasilio/notas#readme",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
 }
