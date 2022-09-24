@@ -7,7 +7,7 @@ const fetchPokemon = async (url, pokemon) =>{
         const data = await response.json()
         console.log(data)
     }catch{
-        return new Error(`Failed to fetchPokemon: ${JSON.stringify(response)}`)
+        return new Error(`Re mal xd`)
     }
 }
 
